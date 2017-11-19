@@ -37,8 +37,8 @@ timer=threading.Timer(5,timeout)
 #创建socket
 recvsock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
-#发送数据包
-for data in range(start,end):
+#发送数据包0,1,2
+for data in range(0,LENGTH):
 	sendData=bin(data)
 	print('发端发送数据%d'%data)
 	recvsock.sendto(sendData.encode('utf-8'),('127.0.0.1',9999))
